@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OutfitBot — Cloud AI</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">OutfitBot.</div>
+      <div class="tagline">Upload your fit — get powerful analysis from the cloud!</div>
+    </header>
+    <main>
+      <section class="card">
+        <div class="uploader">
+          <div id="dropzone" class="dropzone" tabindex="0" aria-label="Upload or drag and drop image here">
+            <div style="display:flex;gap:16px;align-items:center;">
+              <div class="icon" aria-hidden>📷</div>
+              <div class="drop-inner">
+                <div class="big">Drag &amp; drop an image here</div>
+                <small>or click to browse — JPEG / PNG, max 6MB</small>
+              </div>
+            </div>
+          </div>
+          <input id="fileInput" type="file" accept="image/*" style="display:none" />
+          <div class="actions">
+            <button id="feedbackBtn" class="btn" disabled>Get Feedback</button>
+            <button id="removeBtn" class="btn secondary" style="display:none">Remove</button>
+          </div>
+          <div id="previewArea" class="preview-area" aria-live="polite" style="display:none">
+            <div class="thumb" id="thumb"></div>
+            <div class="info">
+              <strong id="fileName"></strong>
+              <div id="fileMeta" style="margin-top:8px;color:var(--muted);font-size:13px"></div>
+            </div>
+          </div>
+          <div id="result" class="result" style="display:none">
+            <div id="processingLine">
+              <span class="loader"></span>
+              <span id="procText">Analyzing outfit...</span>
+            </div>
+            <div id="outcome" style="display:none; margin-top:12px">
+              <h3 style="margin:0 0 8px 0;color:#fff">Feedback</h3>
+              <p id="feedbackText" style="color:var(--muted);margin:0 0 12px 0"></p>
+              <h4 style="margin:8px 0;color:#fff">Detected Labels</h4>
+              <div id="labelsList" style="display:flex;gap:10px;flex-wrap:wrap; margin-bottom: 12px;"></div>
+              <h4 style="margin:8px 0;color:#fff">Dominant Colors</h4>
+              <div id="colorsList" style="display:flex;gap:10px;flex-wrap:wrap; margin-bottom: 12px;"></div>
+              <h4 style="margin:8px 0;color:#fff">Suggestions</h4>
+              <ul id="suggestionsList" style="color:var(--muted);margin:0 0 12px 0;padding-left:18px"></ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+  <script>
+    // Basic error handling for server responses
+    window.addEventListener('DOMContentLoaded', function() {
+      const result = document.getElementById('result');
+      const procText = document.getElementById('procText');
+      // Listen for a custom error event from script.js
+      window.addEventListener('serverError', function(e) {
+        result.style.display = 'block';
+        procText.textContent = 'An error occurred: ' + (e.detail?.message || 'Unknown error');
+        procText.style.color = 'red';
+      });
+    });
+  </script>
+</body>
+</html>
