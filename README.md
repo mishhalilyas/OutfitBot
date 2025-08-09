@@ -49,30 +49,27 @@ npm start
 For Software:
 
 # Screenshots (Add at least 3)
-![Screenshot1] image1.png
-*Add caption explaining what this shows*
+![Screenshot1] <img width="1366" height="768" alt="image1" src="https://github.com/user-attachments/assets/7bc61e43-bd99-4bd3-b99f-37f2031171bc" />
+*User Interface at beginning*
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+![Screenshot2]<img width="1366" height="768" alt="Screenshot (3)" src="https://github.com/user-attachments/assets/060662d8-3d1e-4bd1-bf84-f02d19a5c293" />
 
-# Diagrams
-![Workflow](Add your workflow/architecture diagram here)
-*Add caption explaining your workflow*
+*AI analyses the uploaded photo*
 
-For Hardware:
 
+![Screenshot3]<img width="1366" height="768" alt="Screenshot (4)" src="https://github.com/user-attachments/assets/c15a33c9-23dd-458b-8f79-40b596ef9523" />
+*Gives feedback regarding it*
 
 # Build Photos
-![Components](Add photo of your components here)
-*List out all components shown*
+![Components]<img width="1366" height="768" alt="Screenshot (7)" src="https://github.com/user-attachments/assets/1768c870-9304-4eea-8120-00a38db22718" />
+*This is a screenshot of a web development project named "outfit 2.0" being worked on in the Visual Studio Code editor. The project seems to be a web application using standard technologies like HTML, CSS, and JavaScript. The active file is index.html, and the code shown includes some JavaScript for basic error handling of server responses.*
 
-![Build](Add photos of build process here)
+
+![Build]<img width="1366" height="768" alt="Screenshot (8)" src="https://github.com/user-attachments/assets/4c12c459-fc2f-467d-be1e-bfc3967c6473" />
 *Explain the build steps*
 
-![Final](Add photo of final product here)
+![Final]<img width="1366" height="768" alt="image1" src="https://github.com/user-attachments/assets/5c29523c-bc7c-4c3c-8b49-f8e77bb02ef9" />
 *Explain the final build*
 
 
